@@ -4,6 +4,7 @@ const curseWords = [
   { bad: "marquee", good: "just don't" },
 ];
 
+// DOM elementer og sætning defineres her
 let sentence = "Programmering er sjovt! Men husk altid at bruge var, float og marquee i moderne kodning.";
 const profanityButton = document.querySelector(".filter-button");
 const paragraph = document.querySelector("p");
@@ -11,8 +12,10 @@ const dialog = document.querySelector("dialog");
 const dialogClose = document.querySelector(".close-dialog");
 const container = document.querySelector(".container");
 
+// Sætning skydes ud i DOM'en
 paragraph.textContent = sentence;
 
+// Event listener til checkAndChange funktionen
 profanityButton.addEventListener("click", checkAndChange);
 
 function checkAndChange() {
